@@ -20,8 +20,14 @@ namespace AssignMent7
             Console.WriteLine("The total number of elements "+list.Count);
             Console.WriteLine("Does the element \"Date\" contains in the list?\n True \t False");
             Console.WriteLine("\t"+list.Contains("Date"));
-            list.Insert(2, "Fig");
-            list.Remove("Banana");
+            Console.WriteLine("Enter the index number");
+            int ind = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the value");
+            string element = Console.ReadLine();
+            list.Insert(ind, element);
+            Console.WriteLine("Enter the element to remove");
+            string removable = Console.ReadLine();
+            list.Remove(removable);
             foreach (string item in list)
                 Console.WriteLine(item);
         }
